@@ -1,0 +1,440 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 40px;
+  background: #1f2937;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+header > a:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header img {
+  height: 44px;
+  width: auto;
+  border-radius: 6px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: #374151;
+  color: #fbbf24;
+}
+
+/* Signup button (inside the nav link) */
+nav button {
+  background: #fbbf24;
+  color: #1f2937;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+nav button:hover {
+  background: #f59e0b;
+}
+
+/* ===== Main / Hero ===== */
+main {
+  padding: 60px 20px 20px;
+}
+
+main > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main section {
+  text-align: center;
+  background: #ffffff;
+  padding: 48px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid #fbbf24;
+}
+
+main h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+main p {
+  font-size: 1.05rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ===== Steps ===== */
+article {
+  padding: 40px 20px 60px;
+}
+
+article > section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid #fbbf24;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.step-card h3 {
+  margin-top: 0;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.step-card p {
+  margin-bottom: 0;
+  color: #4b5563;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1f2937;
+  color: #d1d5db;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+footer h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  color: #fbbf24;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 12px 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  main section {
+    padding: 32px 20px;
+  }
+}
+/* ===== Login Form ===== */
+form {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 36px 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid #fbbf24;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input::placeholder {
+  color: #9ca3af;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+}
+
+form .submit {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  background: #1f2937;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form .submit:hover {
+  background: #374151;
+}
+/* ===== Page Title Banner (feature.html) ===== */
+.page-title {
+  text-align: center;
+  padding: 48px 20px 32px;
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.page-title h1 {
+  margin: 0 0 8px;
+  color: #fbbf24;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.page-title p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+/* ===== Feature Cards (feature.html) ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  border-top: 5px solid #fbbf24;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card .emoji {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+/* ===== Report Page (report.html) ===== */
+main > div {
+  text-align: center;
+}
+
+section form {
+  max-width: 560px;
+  margin: 40px auto 60px;
+}
+
+form select {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #ffffff;
+}
+
+form select:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+}
+
+form input[type="file"] {
+  padding: 8px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+form .button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #1f2937;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form .button:hover {
+  background: #374151;
+}
+
+/* ===== Gender / Other Form Selects (signup.html) ===== */
+form select#type {
+  margin-bottom: 18px;
+}
+
+/* ===== Track Page (track.html) ===== */
+header + div {
+  text-align: center;
+  padding: 48px 20px 16px;
+}
+
+header + div h1 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+header + div p {
+  color: #4b5563;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+section > h2 {
+  text-align: center;
+  color: #111827;
+  margin: 40px 0 24px;
+}
+
+section > ol {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  list-style: none;
+  counter-reset: step;
+}
+
+section > ol > li {
+  counter-increment: step;
+  position: relative;
+  background: #ffffff;
+  padding: 18px 20px 18px 68px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid #fbbf24;
+  color: #4b5563;
+}
+
+section > ol > li strong {
+  color: #1f2937;
+}
+
+section > ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  border-radius: 50%;
+  background: #1f2937;
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+/* ===== Responsive Extras ===== */
+@media (max-width: 600px) {
+  .page-title,
+  header + div {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .container {
+    padding: 28px 16px 40px;
+  }
+
+  section form {
+    margin: 28px 16px 40px;
+  }
+}
